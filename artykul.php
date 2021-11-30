@@ -1,20 +1,5 @@
 <?php
 
-function OpenCon()
- {
- $dbhost = "localhost";
- $dbuser = "blog";
- $dbpass = "12345678";
- $db = "blog";
- $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
- 
- return $conn;
- }
- 
-function CloseCon($conn)
- {
- $conn -> close();
- }
 
 class Article {
  
@@ -100,25 +85,12 @@ function formularz($nick = "", $email = "", $comment = "", $key= "") {
     <?php
 
   }
-  
-  $conn = OpenCon();
-  
-  $query = "
-    SELECT `title`, `description`, `date`, `short_text`, `full_text`, 'image_path'
-    FROM `posts`
-    ORDER BY `date` DESC";
-  
-  if ($result = $conn->query($query)) {
 
+  
+ 
     $articles = array();
-	$i =0;
-    while ($obj = $result->fetch_object('Article')) {
-        $articles[$i] = new Article($obj->title, $obj->description, $obj->date, $obj->short_text, $obj->full_text, $obj->image_path);
-		$i++;
-    }
-}
+    $articles[0] = new Article("tytuł", "opis", mktime(11, 14, 54, 8, 12, 2014), "", "", "");
 	
-  CloseCon($conn);
 
 ?>
 
