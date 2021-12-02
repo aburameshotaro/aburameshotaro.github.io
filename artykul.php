@@ -29,7 +29,14 @@ class Article {
   </div> ");
  }
 }
- 
+
+$articlesPerPage = 2;
+$article1 = new Article("Początki buddyzmu", "Kiedy to się wszystko zaczęło?", new DateTime("now"), "Początki buddyzmu datuje się na około 500r. p.n.e., kiedy to indyjski książę Shakyamuni doznał oświecenia.", "Na razie brak", "");
+$article2 = new Article("Chantowanie Nam-Myoho-Renge-Kyo", "Czym jest czantowanie?", new DateTime("now"), "Czantowanie to powtarzanie na głos rytmicznie pewnej frazy. W Buddyźmie Nichirena tą frazą jest Nam-Myoho-Renge-Kyo, która uważana jest za prawo wszechświata.", "Na razie brak", "");
+$article3 = new Article("Buddyzm w Polsce", "Ile osób w polsce?", new DateTime("now"), "W polsce buddyzm rozwija się bardzo dynamicznie.", "Na razie brak", "");
+
+
+$articles = array($article1, $article2, $article3);
 
 // Funkcja wyświetlająca formularz
 
@@ -86,10 +93,6 @@ function formularz($nick = "", $email = "", $comment = "", $key= "") {
 
   }
 
-  
- 
-    $articles = array();
-    $articles[0] = new Article("tytuł", "opis", mktime(11, 14, 54, 8, 12, 2014), "", "", "");
 	
 
 ?>
