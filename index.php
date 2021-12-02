@@ -4,6 +4,15 @@
   <meta charset="utf-8">
   <title>Buddyzm Nichirena blog</title>
   <link href="style.css" rel="stylesheet" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CNMSE60N61"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CNMSE60N61');
+</script>
 </head>
 <?php
   include 'artykul.php';
