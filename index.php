@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name=”keywords” content=”buddyzm, budda, Nichiren” />
   <title>Buddyzm Nichirena blog</title>
   <link href="style.css" rel="stylesheet" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
